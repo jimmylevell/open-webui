@@ -5,6 +5,7 @@ services:
     image: ghcr.io/open-webui/open-webui:main
     volumes:
       - openwebuidata:/app/backend/data
+      - ollama:/root/.ollama
     networks:
       - traefik-public
     deploy:
@@ -37,3 +38,9 @@ volumes:
       o: bind
       type: none
       device: /srv/docker/openwebui
+  openwebuidata:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /srv/docker/openwebui-ollama
