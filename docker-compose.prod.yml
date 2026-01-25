@@ -38,7 +38,7 @@ volumes:
       o: bind
       type: none
       device: /srv/docker/openwebui
-  openwebuidata:
+  ollama:
     driver: local
     driver_opts:
       o: bind
